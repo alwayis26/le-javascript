@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="contoh1"></p>
+    <p id="contoh2"></p>
+    <p id="contoh3"></p>
+    <p id="contoh4"></p>
+    <p id="contoh5"></p>
+
+    <script>
+        var kalimat1="saya belajar javascript di malasngoding";
+        document.getElementById("contoh1").innerHTML=kalimat1.length;
+
+        var kalimat2="selamat datang di tutorial string";
+        var temukan2=kalimat2.indexOf("tutorial");
+        document.getElementById("contoh2").innerHTML=temukan2;
+
+        var kalimat3="belajar javascript di malasngoding";
+        var temukan3=kalimat3.search("javascript");
+        document.getElementById("contoh3").innerHTML=temukan3;
+
+        var kalimat4="belajar javascript di malasngoding";
+        var filter4=kalimat4.slice(22, 42);
+        document.getElementById("contoh4").innerHTML=filter4;
+
+        var kalimat5="belajar javascript di malasngoding";
+        var ganti5=kalimat5.replace('javascript','pemograman');
+        document.getElementById("contoh5").innerHTML=ganti5;
+    </script>
+</body>
+</html>
