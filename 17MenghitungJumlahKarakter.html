@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="con">
+        <form action="" name="FormKu">
+            <div class="la">
+                <label for="">pesan</label>
+                <textarea class="form-control" name="pesan" onkeyup="hitung_karakter()" id=""></textarea>
+                <input type="text" readonly="" name="jumlah" placeholder="jumlah karakter" id="">
+            </div>
+        </form>
+    </div>
+</body>
+    <script type="text/javascript">
+        function hitung_karakter(){
+            document.FormKu.jumlah.value=document.FormKu.pesan.value.length;
+
+            var pesan = document.FormKu.pesan.value;
+            var jumlah = pesan.length;
+
+            document.FormKu.jumlah.value=jumlah;
+
+            if(jumlah>30){
+                document.FormKu.pesan.value=pesan.substring(0,30);
+            }
+        }
+    </script>
+</html>
