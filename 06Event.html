@@ -15,5 +15,39 @@
             document.getElementById("hasil").innerHTML="nama saya ngoging";
         }
     </script>
+
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="memproses()">proses perhitungan</button>
+    <h1 id="samadengan"></h1>
+
+    <script type="text/javascript">
+        function memproses(){
+            // Ambil nilai dari input
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+
+            // Periksa apakah kedua input kosong
+            if (n1 === "" || n2 === "") {
+                alert("harap lengkapi inputan anda!");
+                return; // Hentikan eksekusi jika inputan kosong
+            }
+
+            if(n1.length>2||n2.length>2){
+                alert("angka tidak boleh lebih dari dua!");
+                return;
+            }
+
+            // Jika inputan tidak kosong, konversikan menjadi angka
+            n1 = parseFloat(n1);
+            n2 = parseFloat(n2);
+
+            // Lakukan penjumlahan
+            var samadengan = n1 + n2;
+
+            // Tampilkan hasil pada elemen dengan id 'samadengan'
+            document.getElementById("samadengan").innerHTML = samadengan;
+        }
+    </script>
 </body>
 </html>
