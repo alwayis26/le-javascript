@@ -21,7 +21,32 @@
     <button onclick="memproses()">proses perhitungan</button>
     <h1 id="samadengan"></h1>
 
+    <input type="text" placeholder="ex.andi" id="nama">
+    <input type="number" placeholder="ex.0001" id="kelas">
+    <input type="text" placeholder="ex.jatinangor" id="alamat">
+    <button onclick="datasiswa()">submit data anda</button>
+    <p id="salam"></p>
+
     <script type="text/javascript">
+        function datasiswa(){
+            var nama = document.getElementById('nama').value;
+            var kelas = document.getElementById('kelas').value;
+            var alamat = document.getElementById('alamat').value;
+
+            if(nama === ""||kelas === ""||alamat === ""){
+                alert("tolong lengkapi data anda!");
+                return;
+            }
+
+            var jumlahkatanama = nama.split(" ").length;
+            if(jumlahkatanama>3){
+                alert("jumlah kata dari nama tidak boleh lebih dari 3");
+                return;
+            }
+
+            document.getElementById('salam').innerHTML="selamat datang "+nama+" dari kelas "+kelas+" dan rumah anda di "+alamat;
+        }
+
         function memproses(){
             // Ambil nilai dari input
             var n1 = document.getElementById('n1').value;
