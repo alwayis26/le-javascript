@@ -27,7 +27,40 @@
     <button onclick="datasiswa()">submit data anda</button>
     <p id="salam"></p>
 
+
+    <input type="text" id="karyawan">
+    <input type="number" name="karyawan" id="telp" min="0">
+    <input type="number" name="karyawan" id="nik" min="0">
+    <button onclick="datakaryawan()">masuk data karyawan</button>
+    <table>
+        <tr>
+            <td id="karyawanhasil"></td>
+        </tr>
+        <tr>
+            <td id="telphasil"></td>
+        </tr>
+        <tr>
+            <td id="nikhasil"></td>
+        </tr>
+    </table>
+
     <script type="text/javascript">
+
+        function datakaryawan(){
+            var karyawan = document.getElementById("karyawan").value;
+            var telp = document.getElementById("telp").value;
+            var nik = document.getElementById("nik").value;
+
+            if(karyawan === ""||telp === ""||nik === ""){
+                alert("masukkan data dengan lengkap!");
+                return;
+            }
+
+            document.getElementById("karyawanhasil").innerHTML=karyawan;
+            document.getElementById("telphasil").innerHTML=telp;
+            document.getElementById("nikhasil").innerHTML=nik;
+        }
+
         function datasiswa(){
             var nama = document.getElementById('nama').value;
             var kelas = document.getElementById('kelas').value;
